@@ -1,0 +1,927 @@
+:root {
+    --bg-black-900: #f2f2fc;
+    /* Main background color */
+    --bg-black-100: #fdf9ff;
+    /* Lighter background */
+    --bg-black-50: #e8dfec;
+    /* Even lighter background */
+    --text-black-900: #302e4d;
+    /* Main text color */
+    --text-black-100: #504e70;
+    /* Secondary text color */
+    --skin-color: orange;
+    /* Main accent color */
+}
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    /* Remove outline on focus */
+    text-decoration: none;
+    /* Remove underline from links */
+    box-sizing: border-box;
+    /* Include padding/border in total width/height */
+}
+
+ul {
+    list-style: none;
+    /* Remove bullet points */
+}
+
+/* Main Content Section */
+.main-content {
+
+    min-height: 100vh;
+    /* Full height of viewport */
+    position: absolute;
+    /* Positioning */
+    left: 220px;
+    /* Leave space for aside */
+    padding-left: 100px;
+}
+
+.padd-15 {
+    padding-left: 3px;
+    /* Simplified padding */
+}
+
+.container {
+    max-width: 1100px;
+    /* Max width */
+    width: 100%;
+    margin-top: 10%;
+    /* Margin at top */
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+
+    /* Combined margin for rows */
+}
+
+/* Button Styles */
+.btn {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 15px 35px;
+    color: white;
+    border-radius: 40px;
+    background: var(--skin-color);
+    margin-top: 20px;
+    /* Space above button */
+    min-width: 50px;
+    /* Prevent collapse by ensuring a minimum width */
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    /* Corrected scale */
+}
+
+/* Aside Section */
+/* Style for the aside element */
+.aside {
+    width: 200px;
+    background-color: #333;
+    padding: 20px;
+    color: white;
+    position: fixed;
+    height: 100%;
+}
+
+/* Style for the logo */
+.logo a {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo a span {
+    color: #ff6347;
+    /* Different color for the first letter */
+}
+
+/* Nav list styling */
+.nav {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.nav li {
+    margin: 15px 0;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav a i {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+/* Hover effect */
+.nav a:hover {
+    color: #ff6347;
+    transform: translateX(5px);
+    /* Moves link slightly right on hover */
+}
+
+/* Active link styling */
+.nav .active {
+    color: #ff6347;
+}
+
+.nav li a i {
+    margin-right: 15px;
+    /* Space between icon and text */
+}
+
+/* Home Section */
+.home {
+    min-height: 100vh;
+    /* Full height */
+    display: flex;
+    /* Flexbox layout */
+    color: var(--text-black-900);
+    /* Text color */
+}
+
+
+
+/* Home Info Section */
+.home-info {
+    flex: 0 0 60%;
+    /* Keep flexible width */
+    max-width: 60%;
+    /* Max width */
+    padding: 20px;
+    /* Padding for space around content */
+    min-height: 300px;
+    /* Prevent collapse by ensuring a minimum height */
+    display: flex;
+    /* Use flex to manage layout if needed */
+    flex-direction: column;
+    /* Stack children vertically */
+}
+
+/* Additional Styles for Home Info Children */
+.home-info>* {
+    margin-bottom: 15px;
+    /* Space between elements within home-info */
+}
+
+.home-img {
+    flex: 0 0 40%;
+    /* Flexible width */
+    max-width: 40%;
+    /* Max width */
+    text-align: center;
+    /* Center images */
+    position: relative;
+    /* Required for positioning */
+}
+
+/* Headings Styles */
+h3.hello,
+h4.proff {
+    margin: 15px 0;
+    /* Margin */
+    font-size: 28px;
+    /* Font size */
+}
+
+h3.hello span,
+.typing {
+    font-family: 'Clicker Script', cursive;
+    /* Consistent font */
+    font-size: 30px;
+    /* Font size */
+    font-weight: 700;
+    /* Font weight */
+    color: var(--skin-color);
+    /* Text color */
+}
+
+/* Navigation Toggler */
+.nav-toggler {
+    height: 40px;
+    /* Height */
+}
+
+/* Image Borders */
+.home-img::after {
+    content: '';
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    right: 20px;
+    bottom: 20px;
+    border-bottom: 10px solid var(--skin-color);
+    border-right: 10px solid var(--skin-color);
+}
+
+.home-img::before {
+    content: '';
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    left: -20px;
+    top: -20px;
+    border-left: 10px solid var(--skin-color);
+    border-top: 10px solid var(--skin-color);
+}
+
+.home-img img {
+    height: 300px;
+    margin: auto;
+    border-radius: 5px;
+    /* Image height */
+}
+
+/* Section Styles */
+.section.container {
+    padding-top: 60px;
+    padding-bottom: 70px;
+}
+
+
+
+.ab {
+    font-size: 40px;
+    /* Title size */
+    color: var(--text-black-900);
+    /* Title color */
+    font-weight: 700;
+    /* Title weight */
+    position: relative;
+    /* Position for pseudo-elements */
+    margin-bottom: 60px;
+}
+
+.ab::before {
+    content: '';
+    height: 5px;
+    /* Pseudo-element height */
+    width: 100px;
+    /* Pseudo-element width */
+    background: var(--skin-color);
+    /* Background color */
+    position: absolute;
+    /* Positioning */
+    top: 99%;
+    /* Position below the title */
+    left: 0;
+    /* Align left */
+}
+
+.ab::after {
+    content: '';
+    height: 3px;
+    /* Pseudo-element height */
+    width: 60px;
+    /* Pseudo-element width */
+    background: var(--skin-color);
+    /* Background color */
+    position: absolute;
+    /* Positioning */
+    top: 99%;
+    /* Position below the title */
+    left: 0;
+    /* Align left */
+    margin-top: 8px;
+}
+
+
+
+/* About Section Styles */
+.about {
+    max-width: 100%;
+    /* Spacing around the about section */
+
+
+}
+
+.about-content {
+    flex: 0 100%;
+    width: 100%;
+
+
+}
+
+.text {
+    flex: 0 100%;
+    width: 100%;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 700;
+
+}
+
+.text2 {
+    font-size: 15px;
+    margin-top: 5px;
+    line-height: 20px;
+    color: var(--text-black-700);
+}
+
+.text1 {
+    font-size: 30px;
+    color: var(--skin-color);
+    flex: 0 100%;
+    width: 100%;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.skill {
+    display: flex;
+    margin-top: 40px;
+
+
+    /* Space above the skill section */
+}
+
+.skill .skill-item {
+    flex: 0 0 calc(100% - 20px);
+    /* Allow space for margins */
+    max-width: calc(100% - 20px);
+    /* Max width with margin */
+    margin-bottom: 30px;
+    /* Space between items */
+
+    /* Use flexbox to align elements */
+    align-items: center;
+    /* Center vertically */
+    display: inline;
+
+}
+
+.skill .skill-item h5 {
+    flex: 1;
+    /* Allow the title to take available space */
+    line-height: 40px;
+    /* Line height for title */
+    font-weight: 600;
+    /* Font weight */
+    font-size: 16px;
+    /* Font size */
+    color: var(--text-black-900);
+    /* Title color */
+    text-transform: capitalize;
+    /* Capitalize text */
+    margin-right: 15px;
+    /* Space between title and progress bar */
+}
+
+.skill .skill-item .progress {
+    background-color: var(--bg-black-50);
+    /* Background for progress bar */
+    height: 10px;
+    /* Height of the progress bar */
+    border-radius: 4px;
+    /* Rounded corners */
+    width: 100%;
+    /* Full width */
+    position: relative;
+    /* Positioning for child elements */
+    display: flex;
+    /* Use flexbox to align items */
+    align-items: center;
+    /* Center items vertically */
+}
+
+.skill .skill-item .progress .progress-in {
+    height: 100%;
+    /* Full height */
+    border-radius: 4px;
+    /* Rounded corners */
+    background-color: var(--skin-color);
+    /* Progress fill color */
+    flex: 1;
+    /* Allow progress fill to grow */
+}
+
+.skill .skill-item .skill-per {
+    margin-left: 10px;
+    /* Space between the bar and percentage text */
+    font-weight: 500;
+    /* Font weight for percentage */
+    color: var(--text-black-900);
+    /* Color for percentage text */
+    white-space: nowrap;
+    /* Prevent wrapping */
+}
+
+
+
+/* Other CSS rules remain unchanged */
+
+.pr-info {
+    display: flex;
+    /* Use flexbox */
+    flex-wrap: wrap;
+    /* Allow wrapping of items */
+    margin-top: 40px;
+    gap: 15px;
+    /* Space between items */
+    font-size: 40px;
+    color: black;
+
+}
+
+.info-item {
+    flex: 1 1 calc(50% - 15px);
+    /* Allow items to take up half the width minus the gap */
+    min-width: 200px;
+    /* Minimum width for responsiveness */
+}
+
+.info-items {
+    font-weight: 200;
+    padding: 10px 0;
+    font-size: 20px;
+    color: black;
+    border-bottom: 3px solid var(--bg-black-900);
+}
+
+.item1 {
+    font-weight: 400;
+    color: var(--skin-color);
+    margin-left: 1px;
+    font-size: 18px;
+    display: inline-block;
+}
+
+.buttons .btn {
+    margin-top: 10px;
+    margin-left: 60px;
+}
+
+.heading {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.education,
+.experience {
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+
+
+}
+
+.timeline-box {
+    flex: 0 0 100%;
+    max-width: 95%;
+    margin-top: 10px;
+
+}
+
+.timeline {
+    background-color: rgb(241, 240, 240);
+    padding: 30px 15px;
+    border: 3px soild var(--bg-black-50);
+    border-radius: 10px;
+    width: 95%;
+    position: relative;
+}
+
+.shadow-dark {
+    box-shadow: 0 0 5px;
+
+}
+
+.timeline-item {
+    padding-left: 37px;
+    padding-bottom: 50px;
+    position: relative;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-item::before {
+    content: '';
+    width: 2px;
+    position: absolute;
+    height: 100%;
+    left: 7px;
+    top: 0;
+    background-color: var(--skin-color);
+}
+
+.timeline .circle-dot {
+    position: absolute;
+    /* Change to absolute */
+    left: 0px;
+    /* Match the line's left position */
+    top: 50%;
+    /* Center vertically */
+    transform: translateY(-50%);
+    /* Adjust for perfect centering */
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: var(--skin-color);
+    z-index: 1;
+}
+
+.timeline .timeline-date {
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 8px;
+    /* Reduced margin for better spacing */
+    color: var(--text-black-700);
+    display: flex;
+    /* Use flex for better alignment with icons */
+    align-items: center;
+    /* Center the content vertically */
+}
+
+.timeline .timeline-date .fa {
+    margin-right: 8px;
+    color: var(--icon-color);
+    /* Optional: define icon color */
+}
+
+.timeline .timeline-title {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 10px;
+    /* Adjusted margin */
+    text-transform: capitalize;
+    color: var(--text-black-900);
+    /* Optional: darker color for title */
+}
+
+.service-item {
+    margin-bottom: 30px;
+    flex: 0 0 33%;
+    max-width: 30%;
+    max-height: 40%;
+    margin-bottom: 30px;
+    margin-left: 10px;
+
+
+
+}
+
+.service-item-inner {
+    background-color: var(--bg-black-100);
+    border: 1px solid var(--bg-black-50);
+    border-radius: 10px;
+    padding: 30px 15px;
+    text-align: center;
+
+    transition: all 0.3s ease;
+
+}
+
+.service-item .service-item-inner:hover {
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+
+.service-item .service-item-inner:hover .icon {
+
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 30px;
+    background-color: red;
+
+}
+
+.service-item .service-item-inner .icon .fa {
+    font-size: 40px;
+    line-height: 60px;
+    color: var(--skin-color);
+
+}
+
+.service-item .service-item-inner:hover .icon {
+    color: var(--skin-color);
+}
+
+.service-item .service-item-inner:hover .icon .fa {
+    font-size: 25px;
+    color: black;
+
+}
+
+.service-item-inner h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--text-black-900);
+    font-weight: 700;
+    text-transform: capitalize;
+
+}
+
+.service-item-inner p {
+    line-height: 25px;
+    font-size: 16px;
+    color: var(--text-black-700);
+}
+
+.portfolio-heading {
+    max-width: 100%;
+
+}
+
+.portfolio .container {
+    padding-bottom: 40px;
+
+}
+
+.portfolio-item {
+    flex: 0 0 20%;
+    /* Makes each item smaller by reducing its width */
+    margin: 15px;
+}
+
+.portfolio-item-inner {
+    position: relative;
+    overflow: hidden;
+    border: 8px solid var(--bg-black-100);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+
+.portfolio .portfolio-item .portfolio-img img {
+    width: 80%;
+    /* Shrinks the image size to 80% of the container width */
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-img img {
+    transform: scale(1.05);
+}
+
+
+.contact-content {
+    margin-top: 40px;
+}
+
+/* Contact title styling */
+.contact-title {
+    color: var(--skin-color);
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Subtitle styling */
+.contact-subtitle {
+    color: var(--text-black-900);
+    text-align: center;
+    font-size: 25px;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.padd-151 {
+    margin-left: 20px;
+}
+
+.contact-item {
+    flex: 0 0 25%;
+    max-width: 25%;
+    text-align: center;
+
+}
+
+.contact-item .icon {
+    display: inline-block;
+}
+
+.contact-item .icon .fa {
+    font-size: 25px;
+    color: var(--skin-color);
+}
+
+.contact-item h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-black-900);
+    text-transform: capitalize;
+    margin: 15px 0 5px;
+}
+
+.contact-item p {
+    font-size: 18px;
+    line-height: 25px;
+    color: var(--text-black-700);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.contact-form {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 50px;
+
+
+}
+
+.contact-form .col-6 {
+    flex: 0 0 40%;
+    max-width: 40%;
+    margin-right: 10px;
+}
+
+.contact-form .col-12 {
+    flex: 0 0 50%;
+    max-width: 50%;
+
+}
+
+.form-item {
+    margin-bottom: 30px;
+
+
+}
+
+.form-item .form-control {
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    background-color: var(--bg-black-100);
+    border: 2px solid var(--bg-black-50);
+    padding: 10px 25px;
+    font-size: 16px;
+    color: var(--text-black-700);
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+
+
+}
+
+.form-item textarea.form-control {
+    height: 140px;
+}
+
+.form-control .btn {
+    height: 50px;
+    padding: 0 50px;
+}
+
+.form-item h3 {
+    color: var(--skin-color);
+}
+
+.education h3 {
+    font-size: 30px;
+}
+
+.experience h3 {
+    font-size: 30px;
+}
+
+/* Footer Styles */
+/* Footer Styles */
+/* Footer Styles */
+/* Footer Styles */
+/* Footer Styles */
+.footer {
+    width: 100%;
+    /* Full width */
+    background-color: #333;
+    /* Background color */
+    color: #fff;
+    /* Text color */
+    padding: 40px 0;
+    /* Top and bottom padding */
+    position: relative;
+    /* Relative positioning */
+    clear: both;
+    /* Clear floats */
+    left: 0;
+    /* Align to the left */
+    bottom: 0;
+    /* Align to the bottom */
+    margin-top: 20px;
+    /* Space above footer */
+    border-radius: 10px;
+    /* Optional: Rounded corners */
+
+
+}
+
+/* Footer Content */
+.footer-content {
+    max-width: 1100px;
+    /* Same as your main container */
+    margin: 0 auto;
+    /* Centering */
+    display: flex;
+    /* Flexbox for layout */
+    flex-wrap: wrap;
+    /* Wrap items */
+    justify-content: space-between;
+    /* Space between sections */
+    gap: 20px;
+    /* Gap between sections */
+    padding: 0 15px;
+    /* Padding for content */
+}
+
+/* Footer Sections */
+.footer-section {
+    flex: 1 1 200px;
+    /* Flex properties */
+    padding: 20px;
+    /* Padding for sections */
+}
+
+.footer-section h3 {
+    font-size: 1.2rem;
+    /* Heading font size */
+    margin-bottom: 15px;
+    /* Margin below heading */
+}
+
+.footer-section p,
+.footer-section a {
+    font-size: 0.9rem;
+    /* Font size for paragraphs and links */
+    color: #ddd;
+    /* Color for links and text */
+    text-decoration: none;
+    /* No underline */
+    margin-bottom: 8px;
+    /* Margin below each link */
+    display: block;
+    /* Block display */
+}
+
+.footer-section a:hover {
+    color: #fff;
+    /* Change color on hover */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    border-top: 1px solid #555;
+    /* Top border */
+    padding-top: 15px;
+    /* Padding above */
+    font-size: 0.85rem;
+    /* Font size */
+    color: #bbb;
+    /* Color */
+    text-align: center;
+    /* Center text */
+}
+
+/* Responsive Footer Layout */
+.main-content,
+.footer {
+    margin-left: 0;
+    padding: 40px;
+}
+
+.footer .container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
