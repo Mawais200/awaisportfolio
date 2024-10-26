@@ -925,3 +925,16 @@ h3.hello span,
     text-align: center;
     margin-bottom: 20px;
 }
+@media (max-width: 768px) {
+    /* Styles for mobile devices */
+    body {
+        font-size: 14px;
+    }
+    /* Adjust other elements as needed */
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
